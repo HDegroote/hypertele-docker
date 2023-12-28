@@ -1,0 +1,22 @@
+{
+  "name": "hypertele-docker",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDegroote/hypertele-docker.git"
+  },
+  "author": "H. Degroote",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/HDegroote/hypertele-docker/issues"
+  },
+  "homepage": "https://github.com/HDegroote/hypertele-docker#readme",
+  "dependencies": {
+    "hypertele": "^1.1.1"
+  }
+}
