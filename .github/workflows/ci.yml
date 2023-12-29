@@ -31,10 +31,18 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push Docker image
+        name: Build and push server Docker image
         uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5.1.0 https://github.com/docker/build-push-action/releases/tag/v5.1.0
         with:
-          context: . # TODO: verify if needed (uses context of cwd instead of that of a fresh git checkout)
+          context: ./server
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/hypertele-server:${{ steps.extract_tag.outputs.tag }}, ${{ secrets.DOCKERHUB_USERNAME }}/hypertele-server:latest
+
+        name: Build and push client Docker image
+        uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5.1.0 https://github.com/docker/build-push-action/releases/tag/v5.1.0
+        with:
+          context: ./client
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hypertele-client:${{ steps.extract_tag.outputs.tag }}, ${{ secrets.DOCKERHUB_USERNAME }}/hypertele-client:latest
