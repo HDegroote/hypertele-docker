@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/HDegroote/hypertele-docker#readme",
   "dependencies": {
-    "hypertele": "^1.1.1"
+    "hypertele": "^1.1.2"
   }
 }
