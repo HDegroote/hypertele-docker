@@ -1,6 +1,6 @@
 # Hypertele Docker
 
-Deprecated: these dockers are no longer updated, I am now using [p2proxy](https://github.com/HDegroote/p2proxy) instead.
+WARNING: DEPRECATED. these dockers are no longer maintained. For a maintained equivalent, see [p2proxy](https://github.com/HDegroote/p2proxy) instead.
 
 Docker containers for hypertele.
 
